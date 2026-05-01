@@ -27,8 +27,7 @@ Algorithm BirthDayCakeCandles_NonRecusive(candles, n) { // candles is an array
 ---
 
 ## Analysis
-**Basic Operation:** candle <- candles[index] , assign the candle value from the index to compare and count
-
+**Basic Operation:** Comparison of candle > tallest , that check if there is new maximum candle
 **Time Function of the Algorithm:** f(n) = 5n+3
 
 **Big-Oh** O(n)
