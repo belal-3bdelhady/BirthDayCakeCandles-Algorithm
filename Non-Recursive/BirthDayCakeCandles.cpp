@@ -33,10 +33,10 @@ int BirthDayCakeCandles(int candles[],int n) {
         int candle = candles[i];
 
         if (candle > tallest) {
+            tallest = candle;
             count=1;
         }
-        if (candle < tallest) {
-            tallest = candle;
+        else if (candle < tallest) {
             count++;
         }
     }
