@@ -33,6 +33,6 @@ Algorithm BirthDayCakeCandles_NonRecusive(candles, n) { // candles is an array
 
 **Big-Oh** O(n)
 
-**Big-Theta** O(n)
+**Big-Theta** 0(n)
 
-**Big-Omega** O(1)
+**Big-Omega** Ω(n)

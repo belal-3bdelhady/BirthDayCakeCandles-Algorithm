@@ -1,25 +1,23 @@
-#include <iostream>
-
-using namespace std;
+#include <stdio.h>
 
 int BirthDayCakeCandles(int candles[], int n);
 
 int main() {
     // number of candles
     int n;
-    cout << "Enter number of candles you have: ";
-    cin >> n;
+    printf("Enter number of candles you have: ");
+    scanf("%d", &n);
 
     // candles
     int candles[n];
-    cout << "Input candles heights: ";
+    printf("Input candles heights: ");
     for (int i = 0; i < n; i++) {
-        cin >> candles[i];
+        scanf("%d", &candles[i]);
     }
 
     int numberOfTallestOne = BirthDayCakeCandles(candles,n);
 
-    cout << "\nNumber of times tallest one appears = " << numberOfTallestOne << endl;
+    printf("\nNumber of times tallest one appears = %d \n", numberOfTallestOne);
 
     return 0;
 }
