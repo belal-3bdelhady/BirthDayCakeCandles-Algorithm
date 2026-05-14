@@ -8,11 +8,23 @@ int main() {
     printf("Enter number of candles you have: ");
     scanf("%d", &n);
 
+    if (n<=0){
+        printf("Please input a positive number \n");
+        return 1 ;
+    }
+
     // candles
     int candles[n];
     printf("Input candles heights: ");
     for (int i = 0; i < n; i++) {
         scanf("%d", &candles[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (candles[i] <= 0){
+            printf("Candle hight must be positive \n");
+            return 1 ;
+        }
     }
 
     int numberOfTallestOne = BirthDayCakeCandles(candles,n);
