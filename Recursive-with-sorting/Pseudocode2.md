@@ -110,10 +110,7 @@ Combine: The merge function is used to reintegrate the halves in descending orde
 n = array size = last - first + 1 
 
 **Check whether the number of times the basic operation is executed may vary due to the inputs type**
-Yes, the number of comparisons varies depending on the input values.
-Best case: min(n1, n2) comparisons (occurs when all elements of one subarray are merged before any element of the second subarray).
-Worst case: n1 + n2 - 1 comparisons = n - 1 comparisons (occurs when pointers i and j alternate until the very last element).
-Overall time complexity: θ(n) in all cases because the total array writes always equal exactly n regardless of comparison counts.
+No, the asymptotic growth rate does not vary.
 
 **Basic Operation**
 comparison >= in line 24 while loop: Left[i] >= Right[j]
@@ -124,10 +121,10 @@ comparison >= in line 24 while loop: Left[i] >= Right[j]
         k=1​
 
 **Find closed form for the sum or at least establish its order of growth**
-C(n)∈Θ(n)
-
+C(n) ∈ Θ(n)
+Thus , T(n)= θ(n) = O(n) = Ω(n)
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-
+```
 ## Analysis of mergeSort algorithm
 
 **input’s size**
@@ -159,16 +156,29 @@ T(n) = (2^k) * T(n/(2^k)) + kcn
 **Time Complexity**
 The base case is reached when n/(2^k) = 1
 Thus, n = 2^k
-Taking log base 2 on both sides: k = log2(n)
+Taking log base 2 on both sides: k = log (n)
+                                        2
 
 Substituting k back into the General Form:
 
-T(n) = (2^(log (n))) * T(1) + cn x log2(n)
-              2
+T(n) = (2^(log (n))) * T(1) + cn x log (n)
+              2                       2
 
-T(n) = n * θ(1) + cn * log2(n)
+T(n) = n * θ(1) + cn * log (n)
+                          2
+
 T(n) = θ(n) + θ(n log n)
-Hence, T(n) = θ(n log n) = O(total_canles) = Ω(total_candles)
+Hence, T(n) = θ(n log n) = O(n log n) = Ω(n log n)
+
+**Master Method**
+
+a=2 , b=2 , f(n)=cn
+
+![alt text](image.png) = n^log 2 = n^1 = f(n) = θ(n)
+                              2
+
+thus , T(n) = θ(n log n)
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 ## Analysis of numOfHighestCandles algorithm
@@ -199,8 +209,8 @@ T(n) = θ(n log n) + c*k + θ(1)
 T(n) = θ(n log n) + O(n)
 
 **General Form**
-T(n) = θ(n log n) + O(n)
+T(n) = θ(n log n) + O(k)
 
 **Time Complexity**
-Thus, T(n) = θ(n log n) + θ(n)
+Thus,  T(n) = θ(n log n) + θ(k)
 Hence, T(n) = θ(n log n)

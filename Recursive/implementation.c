@@ -29,12 +29,13 @@ int main() {
     printf("Enter the number of candles: ");
     scanf("%d", &total_candles);
  
-    int candles[total_candles];
-
     if (total_candles<=0){
         printf("Please input a positive number \n");
         return 1 ;
     }
+
+    int candles[total_candles];
+
     
     printf("Enter the heights of the candles: \n");
     for (int i = 0; i < total_candles; i++) {
